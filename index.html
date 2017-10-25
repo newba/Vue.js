@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction à Vue js</title>
+    <!-- Passo 1 injecter le script -->
+    <script src="https://unpkg.com/vue"></script>
+
+</head>
+<body>
+    <h1>Bienvenue à Vue.js</h1>
+    <div id="app3">
+
+        <h1>Compteur</h1>
+        Compteur : {{ compteur }} <br>
+        <button v-on:click="onButtonClick">Click + 1</button>
+        <button v-on:click="outButtonClick">Click - 1</button>
+        <button @click="compteur=0">Reset</button>
+
+
+    </div>
+<br>
+    <h1>Type check</h1>
+    <div id="app2">
+        <input v-model="text" type="text"> <br>
+        Vous avez entré : {{ text }} <br>
+        <button @click="text = ''">Clear</button>
+
+    </div>
+<br>
+
+    <div id="app4">
+
+            <h1>Convertiseur de Temperature</h1>
+            <input @keyup="get_result()" v-model="value" id="input" type="text">
+
+            <div>
+                <p class="fw3">{{ text }} Fahrenheit to Celcius</p>
+                <h1>{{ ftc }} ºC</h1>
+            </div>
+
+            <div>
+                <p class="fw3">{{ text }} Celcius to Fahrenheit</p>
+                <h1>{{ ctf }} ºF</h1>
+            </div>
+
+    </div>
+    <br>
+
+    <h2>Le champ texte en two way data binding</h2>
+    <div id="app5">
+        <input v-model="valeur" type="text">
+        <select v-model="typeConversion">
+            <option value="0"></option>
+            <option value="1">C&deg -> F&deg</option>
+            <option value="2">F&deg -> C&deg</option>
+            <option value="3">m -> "</option>
+        </select>
+        Le résultat de la conversion est: {{ niceResultat }}
+    </div>
+
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+
+<script src="js/app2.js"></script>
+<script src="js/app3.js"></script>
+<script src="js/app4.js"></script>
+<script src="js/app5.js"></script>
+</html>
